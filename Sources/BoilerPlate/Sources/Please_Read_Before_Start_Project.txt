@@ -1,0 +1,39 @@
+Before starts Please install necessory dependency for the project...
+
+=> Copy following line and paste in cmd or terminal...
+    yarn add axios @react-native-community/netinfo @react-native-async-storage/async-storage @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/stack react-native-gesture-handler @react-native-masked-view/masked-view @reduxjs/toolkit react-redux 
+
+* MainActivity.java
+    -> Add in second line - import android.os.Bundle;
+    -> Add Right function starts -  @Override
+                                        protected void onCreate(Bundle savedInstanceState) {
+                                        super.onCreate(null);
+                                    }
+
+* Add line of first position in index.js file - import 'react-native-gesture-handler';
+
+* Replace App.js with root file of App...
+
+* Add the following in Package.json file...
+    - "android": "npx react-native run-android",
+    - "androidClean": "cd android && ./gradlew clean && cd ..",
+    - "androidBuild": "cd android && ./gradlew assembleRelease && cd ..",
+    - "androidUpdate": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw",
+    - "ios": "npx react-native run-ios",
+    
+    * if you are using env...
+        - "android": "yarn androidDevelopment",
+        - "androidClean": "cd android && ./gradlew clean && cd ..",
+        - "androidBuild": "cd android && ./gradlew assembleRelease && cd ..",
+        - "androidUpdate": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw",
+        - "androidDevelopment": "ENVFILE=.env.development npx react-native run-android --variant=developmentdebug",
+        - "androidDevelopmentRelease": "cd android && ENVFILE=.env.development ./gradlew assembleRelease && cd ..",
+        - "androidStaging": "ENVFILE=.env.staging npx react-native run-android --variant=stagingdebug",
+        - "androidStagingRelease": "cd android && ENVFILE=.env.staging ./gradlew assembleRelease && cd ..",
+        - "androidProduction": "ENVFILE=.env.production npx react-native run-android --variant=productiondebug",
+        - "androidProductionRelease": "cd android && ENVFILE=.env.production ./gradlew assembleRelease && cd ..",
+        - "ios": "yarn iosDevelopment",
+        - "iosDevelopment": "ENVFILE=.env.development npx react-native run-ios --scheme development",
+        - "iosStaging": "ENVFILE=.env.staging npx react-native run-ios --scheme staging",
+        - "iosProduction": "ENVFILE=.env.production npx react-native run-ios --scheme production",
+    

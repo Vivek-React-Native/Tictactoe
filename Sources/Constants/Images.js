@@ -1,0 +1,20 @@
+const Images = {
+  ic_triangle: require('../Assets/Images/Triangle.png'),
+  ic_square: require('../Assets/Images/Square.png'),
+  ic_circle: require('../Assets/Images/Circle.png'),
+  im_pencil: require('../Assets/Images/BackgroundImage.jpg'),
+  img_Ball: require('../Assets/Images/Ball.jpg'),
+  img_Bike: require('../Assets/Images/Bike.jpg'),
+  img_Car: require('../Assets/Images/Car.jpg'),
+  img_Flower: require('../Assets/Images/Flower.jpg'),
+  img_Fox: require('../Assets/Images/Fox.jpg'),
+  img_Orange: require('../Assets/Images/Orange.jpg'),
+  img_Parrot: require('../Assets/Images/Parrot.jpg'),
+  img_PineApple: require('../Assets/Images/PineApple.jpg'),
+  img_OpenImage: require('../Assets/Images/OpenImage.jpg'),
+  img_Quiz: require('../Assets/Images/Quiz.webp'),
+  Emoji: require('../Assets/Images/Emoji.png'),
+  PencilAndPage: require('../Assets/Images/PencilAndPage.jpg'),
+  Heart: require('../Assets/Images/Heart.png'),
+};
+export default Images;
